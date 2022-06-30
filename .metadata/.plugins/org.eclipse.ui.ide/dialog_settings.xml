@@ -7,19 +7,13 @@
 		<item key="WizardProjectsImportPage.STORE_CLOSE_CREATED_PROJECTS_ID" value="false"/>
 		<item key="WizardProjectsImportPage.STORE_HIDE_CONFLICTING_PROJECTS_ID" value="false"/>
 		<list key="WizardProjectsImportPage.STORE_DIRECTORIES">
-			<item value="C:\Users\cdnwe\OneDrive\바탕 화면\[학원 자료]\Step02"/>
-			<item value="C:\Users\cdnwe\OneDrive\바탕 화면\[학원 자료]\Step01"/>
+			<item value="C:\Users\cdnwe\OneDrive\바탕 화면\Jsp1\total"/>
+			<item value="C:\Users\cdnwe\OneDrive\바탕 화면\Jsp1\Step02Re"/>
+			<item value="C:\Users\cdnwe\OneDrive\바탕 화면\Jsp1\Step02"/>
+			<item value="C:\Users\cdnwe\OneDrive\바탕 화면\Jsp1\Step01"/>
 		</list>
 		<list key="WizardProjectsImportPage.STORE_ARCHIVES">
 			<item value=""/>
-		</list>
-	</section>
-	<section name="ChooseWorkspaceDialogSettings">
-		<item key="DIALOG_X_ORIGIN" value="654"/>
-		<item key="DIALOG_Y_ORIGIN" value="337"/>
-	</section>
-	<section name="WORKBENCH_SETTINGS">
-		<list key="ENABLED_TRANSFERS">
 		</list>
 	</section>
 </section>

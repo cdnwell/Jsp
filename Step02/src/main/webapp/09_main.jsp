@@ -8,6 +8,9 @@
 </head>
 <body>
 <%
+	// 1. id에 id 값을 대입한다.
+	// 2. 로그인에 실패해 id 변수에 값이 없으면 login 태그를 다시 표현한다.
+	// 3. 로그인이 성공하면 logout.jsp 파일로 가는 a태그를 만들어준다.
 	String id = (String)session.getAttribute("id");
 
 	if(id == null){

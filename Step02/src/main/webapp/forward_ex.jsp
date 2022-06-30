@@ -10,5 +10,9 @@
 	dispatcher.forward(request, response);
 	//forward로 하면 url을 감추는 기능도 하긴 한다.
 	
-	
+	// 1. data 변수 받아오기
+	// 2. attribute에 result 키로 request_(+param : 변수) 값 저장하기
+	// 3. getRequestDispatcher 메서드
+	// 3-1. RequestDispatcher 클래스
+	// 4. forward 메서드
 %>

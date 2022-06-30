@@ -152,7 +152,7 @@
              Note: The pattern used is equivalent to using pattern="common" -->
         <Valve className="org.apache.catalina.valves.AccessLogValve" directory="logs" pattern="%h %l %u %t &quot;%r&quot; %s %b" prefix="localhost_access_log" suffix=".txt"/>
 
-      <Context docBase="C:\Users\cdnwe\OneDrive\바탕 화면\Jsp\.metadata\.plugins\org.eclipse.wst.server.core\tmp0\wtpwebapps\ROOT" path="" reloadable="false"/><Context docBase="C:\Users\cdnwe\OneDrive\바탕 화면\Jsp\.metadata\.plugins\org.eclipse.wst.server.core\tmp0\wtpwebapps\total" path="/total" reloadable="true" source="org.eclipse.jst.jee.server:total"/><Context docBase="C:\Users\cdnwe\OneDrive\바탕 화면\Jsp\.metadata\.plugins\org.eclipse.wst.server.core\tmp0\wtpwebapps\Step01" path="/Step01" reloadable="true" source="org.eclipse.jst.jee.server:Step01"/><Context docBase="C:\Users\cdnwe\OneDrive\바탕 화면\Jsp\.metadata\.plugins\org.eclipse.wst.server.core\tmp0\wtpwebapps\Step02" path="/Step02" reloadable="true" source="org.eclipse.jst.jee.server:Step02"/></Host>
+      <Context docBase="C:\Users\cdnwe\OneDrive\바탕 화면\Jsp\.metadata\.plugins\org.eclipse.wst.server.core\tmp0\wtpwebapps\ROOT" path="" reloadable="false"/><Context docBase="C:\Users\cdnwe\OneDrive\바탕 화면\Jsp\.metadata\.plugins\org.eclipse.wst.server.core\tmp0\wtpwebapps\Step02Re" path="/Step02Re" reloadable="true" source="org.eclipse.jst.jee.server:Step02Re"/></Host>
     </Engine>
   </Service>
 </Server>
