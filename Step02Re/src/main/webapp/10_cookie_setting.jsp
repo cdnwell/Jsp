@@ -7,6 +7,12 @@
 <title>Insert title here</title>
 </head>
 <body>
-
+<%
+	Cookie cookie = new Cookie("test","쿠키내용");
+	cookie.setMaxAge(30);
+	cookie.setPath("/");
+	response.addCookie(cookie);
+%>
+<a href="cookie_result.jsp">쿠키 조회 페이지 이동</a>
 </body>
 </html>
