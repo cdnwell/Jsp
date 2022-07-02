@@ -10,9 +10,10 @@
 	dispatcher.forward(request, response);
 	//forward로 하면 url을 감추는 기능도 하긴 한다.
 	
-	// 1. data 변수 받아오기
-	// 2. attribute에 result 키로 request_(+param : 변수) 값 저장하기
-	// 3. getRequestDispatcher 메서드
-	// 3-1. RequestDispatcher 클래스
-	// 4. forward 메서드
+	// 1.param 변수에 data 매개변수를 받아온다(request의)
+	// 2.request에 키는 result, 값은 request_+(param:변수이름)으로 값을 넣어준다.
+	// 3.RequestDispatcher 객체를 생성해주고 request에서 getRequestDispatcher 메서드를 실행한다. forward_result.jsp
+	// 로 이동
+	// 4.forward하면서 request와 response 값을 넘겨준다.
+	
 %>

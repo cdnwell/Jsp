@@ -10,4 +10,6 @@
 	//03_send_redirect에서 데이터를 보내도 데이터 null값이 나온다.
 	response.sendRedirect("redirect_result.jsp");
 	
+	
+	
 %>

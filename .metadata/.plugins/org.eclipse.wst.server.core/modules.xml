@@ -2,4 +2,6 @@
 <modules>
   <module moduleId="org.eclipse.jst.jee.server:Step02" serverId="Tomcat v9.0 Server at localhost"/>
   <module moduleId="org.eclipse.jst.jee.server:Step02Re" serverId="Tomcat v9.0 Server at localhost"/>
+  <module moduleId="org.eclipse.jst.jee.server:StepRe03" serverId="Tomcat v9.0 Server at localhost"/>
+  <module moduleId="org.eclipse.jst.jee.server:totalRe" serverId="Tomcat v9.0 Server at localhost"/>
 </modules>

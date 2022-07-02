@@ -1,97 +1,5 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8"
 	pageEncoding="UTF-8"%>
-<style>
-    	*{
-            margin: 0;
-            padding: 0;
-        }
-        .flex_container{
-            display: flex;
-            flex-direction: column;
-            width: 1200px;
-            margin: 0 auto;
-            font-size: 0px;
-        }
-        #member_bar{
-            height: 50px;
-            background-color: #e9e9e9;
-            text-align: right;
-        }
-        #member_bar img{
-            width: 50px;
-            float: left;
-        }
-        .login_form{
-        	display:inline-block;
-        	width: 600px;
-        	padding: 10px 0px;
-        }
-        .login_form > form{
-        	display:flex;
-        	flex-direction:row;
-        	justify-content:flex-end;
-        }
-        .login_form > form > *{
-        	height: 30px;
-        	box-sizing: border-box;
-        }
-        .login_form > form > button{
-        	width: 100px;
-        }
-        .profile > p{
-            width: 200px;
-            float: left;
-            font-size: 16px;
-            text-align: left;
-            padding-left: 5px;
-            margin-top: 2px;
-        }
-        .profile{
-            width: 300px;
-            display: inline-block;
-        } 
-        nav{
-            padding:20px 100px;
-            background-color: #e9e9e9;
-        }
-        nav ul{
-            list-style-type: none;
-            display: flex;
-            flex-direction: row;
-            justify-content: space-around;
-        }
-       
-        nav a:link,nav a:visited{
-            font-size: 20px;
-            font-weight: bold;
-            text-decoration: none;
-            color:black;
-        }
-        .ad_img {
-            position: relative;
-        }
-        .ad_img button{
-            background: none;
-            border: none;
-            position: absolute;
-            background-color: rgba(255, 255, 255, 0.5);
-            width: 50px;
-            height: 50px;
-        }
-        .ad_img button img{
-            width: 50px;
-        }
-        .left_arrow{
-            top : calc(50% - 50px);
-        }
-        .right_arrow{
-            top : calc(50% - 50px);
-            right: 0px;
-            transform: rotate(180deg);            
-        }
-    </style>
-
-
 <header>
 	<div id="member_bar">
 		<%
@@ -101,27 +9,30 @@
 		%>
 		<div class="login_form">
 			<form action="login_process.jsp" method="post">
-				<input type="text" name="id" placeholder="아이디를 입력하세요">
+				<input type="text" name="id" placeholder="아이디를 입력하세요"> 
 				<input type="password" name="pass" placeholder="암호를 입력하세요">
-				<button>로그인</button><button id="btn_register" type="button">회원가입</button>
+				<button>로그인</button>
+				<button id="btn_register" type="button">회원가입</button>
 			</form>
 		</div>
-		 <%
-	} else {
-	%>
+		<%
+		} else {
+		%>
 		<div class="profile">
 			<img src="resource/images/profile.png" alt="">
 			<p>OOO로그인 하셨습니다.</p>
-			<p><a href="logout.jsp">로그아웃</a> | 정보수정</p>
+			<p>
+				<a href="logout.jsp">로그아웃</a> | 정보수정
+			</p>
 		</div>
-		 <%
-	}
-	%>
+		<%
+		}
+		%>
 	</div>
 
 
-		<!-- 나중에 회원가입을 누르면 자바스크립트로 회원가입 페이지로 이동시키기 -->
-		
+	<!-- 나중에 회원가입을 누르면 자바스크립트로 회원가입 페이지로 이동시키기 -->
+
 
 	<div class="ad_img">
 		<button class="left_arrow">

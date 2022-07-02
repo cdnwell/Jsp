@@ -130,7 +130,7 @@
 		<button class="right_arrow">
 			<img src="resource/images/left_arrow.png" alt="">
 		</button>
-		<img src="resource/images/main_4.jpg" alt="">
+		<img src="resource/images/main_4.jpg" alt="" class="main_img">
 	</div>
 </header>
 <nav>
