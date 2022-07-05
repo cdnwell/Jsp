@@ -1,23 +1,12 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <section name="Workbench">
-	<section name="ExternalProjectImportWizard">
-		<item key="WizardProjectsImportPage.STORE_NESTED_PROJECTS" value="false"/>
-		<item key="WizardProjectsImportPage.STORE_COPY_PROJECT_ID" value="true"/>
-		<item key="WizardProjectsImportPage.STORE_ARCHIVE_SELECTED" value="false"/>
-		<item key="WizardProjectsImportPage.STORE_CLOSE_CREATED_PROJECTS_ID" value="false"/>
-		<item key="WizardProjectsImportPage.STORE_HIDE_CONFLICTING_PROJECTS_ID" value="false"/>
-		<list key="WizardProjectsImportPage.STORE_DIRECTORIES">
-			<item value="C:\Users\cdnwe\OneDrive\바탕 화면\[학원 자료]\JSP 폴더\요일별 강의 파일\7.4 월 jsp\jstl"/>
-			<item value="C:\Users\cdnwe\OneDrive\바탕 화면\[학원 자료]\JSP 폴더\요일별 강의 파일\7.1 금 jsp\jsp\Step03"/>
-			<item value="C:\Users\cdnwe\OneDrive\바탕 화면\[학원 자료]\JSP 폴더\요일별 강의 파일\7.1 금 jsp\jsp\Step02"/>
-			<item value="C:\Users\cdnwe\OneDrive\바탕 화면\[학원 자료]\JSP 폴더\요일별 강의 파일\7.1 금 jsp\jsp\Step01"/>
-			<item value="C:\Users\cdnwe\OneDrive\바탕 화면\Jsp1\total"/>
-			<item value="C:\Users\cdnwe\OneDrive\바탕 화면\Jsp1\Step02Re"/>
-			<item value="C:\Users\cdnwe\OneDrive\바탕 화면\Jsp1\Step02"/>
-			<item value="C:\Users\cdnwe\OneDrive\바탕 화면\Jsp1\Step01"/>
+	<section name="NewWizardAction">
+		<item key="NewWizardSelectionPage.STORE_SELECTED_ID" value="org.eclipse.jdt.ui.wizards.JavaProjectWizard"/>
+		<list key="NewWizardSelectionPage.STORE_EXPANDED_CATEGORIES_ID">
 		</list>
-		<list key="WizardProjectsImportPage.STORE_ARCHIVES">
-			<item value=""/>
-		</list>
+	</section>
+	<section name="ChooseWorkspaceDialogSettings">
+		<item key="DIALOG_X_ORIGIN" value="387"/>
+		<item key="DIALOG_Y_ORIGIN" value="272"/>
 	</section>
 </section>

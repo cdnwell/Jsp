@@ -1,0 +1,19 @@
+package db;
+
+import java.util.ArrayList;
+
+import dao.MemberDAO;
+import vo.MemberVO;
+
+public class SelectAllMemberMain_src {
+
+	public static void main(String[] args) {
+		ArrayList<MemberVO> list = MemberDAO.getInstance().selectAllMember();
+		
+		for(MemberVO vo : list) {
+			System.out.println(vo.toString());
+		}
+		
+	}
+
+}

@@ -1,0 +1,15 @@
+package main;
+
+import java.util.ArrayList;
+
+import dao.MemberDAO;
+import vo.MemberVO;
+
+public class SelectAllMemberMain {
+
+	public static void main(String[] args) {
+		ArrayList<MemberVO> list = MemberDAO.getInstance().selectAllMember();
+		
+	}
+
+}

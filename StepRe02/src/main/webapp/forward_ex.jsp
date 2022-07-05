@@ -1,14 +1,14 @@
-<%@ page language="java" contentType="text/html; charset=EUC-KR"
-    pageEncoding="EUC-KR"%>
-<%
-	// 1. data º¯¼ö ¹Þ¾Æ¿À±â
-	// 2. attribute¿¡ result Å°·Î request_(+param : º¯¼ö) °ª ÀúÀåÇÏ±â
-	// 3. getRequestDispatcher ¸Þ¼­µå
-	// 3-1. RequestDispatcher Å¬·¡½º
-	// 4. forward ¸Þ¼­µå
+<%@ page language="java" contentType="text/html; charset=UTF-8"
+    pageEncoding="UTF-8"%>
+<% 
+	// 1.param ë³€ìˆ˜ì— data ë§¤ê°œë³€ìˆ˜ë¥¼ ë°›ì•„ì˜¨ë‹¤(requestì˜)
+	// 2.requestì— í‚¤ëŠ” result, ê°’ì€ request_+(param:ë³€ìˆ˜ì´ë¦„)ìœ¼ë¡œ ê°’ì„ ë„£ì–´ì¤€ë‹¤.
+	// 3.RequestDispatcher ê°ì²´ë¥¼ ìƒì„±í•´ì£¼ê³  requestì—ì„œ getRequestDispatcher ë©”ì„œë“œë¥¼ ì‹¤í–‰í•œë‹¤. forward_result.jsp
+	// ë¡œ ì´ë™
+	// 4.forwardí•˜ë©´ì„œ requestì™€ response ê°’ì„ ë„˜ê²¨ì¤€ë‹¤.
 	
-	String data = request.getParameter("data");
-	request.setAttribute("result", "request_"+data);
+	String param = request.getParameter("data");
+	request.setAttribute("result","request_"+param);
 	RequestDispatcher dispatcher = request.getRequestDispatcher("forward_result.jsp");
-	dispatcher.forward(request, response);
+	dispatcher.forward(request,response);
 %>

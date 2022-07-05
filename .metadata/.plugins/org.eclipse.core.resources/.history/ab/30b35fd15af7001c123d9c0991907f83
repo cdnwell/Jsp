@@ -1,0 +1,24 @@
+<%@ page language="java" contentType="text/html; charset=UTF-8"
+    pageEncoding="UTF-8"%>
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+<style type="text/css">
+   table{
+   border-collapse: collapse;
+   }
+   td{
+   border : 1px solid black;
+   padding:20px;
+   }
+</style>
+</head>
+<body>
+<%
+	int row = Integer.parseInt(request.getParameter("row"));
+	int col = Integer.parseInt(request.getParameter("col"));
+%>
+</body>
+</html>

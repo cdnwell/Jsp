@@ -25,7 +25,6 @@
 					str += r.month + "/"+r.date +" "+r.hour + ":" + r.minute
 					+":"+r.second;
 					$("#result").html(str);
-					
 				}
 			
 			});

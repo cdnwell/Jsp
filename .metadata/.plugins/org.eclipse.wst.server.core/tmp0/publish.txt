@@ -1,0 +1,11 @@
+#Tomcat publish data
+#Tue Jul 05 17:23:37 KST 2022
+org.eclipse.jst.jee.server\:Step03=C\:\\Workspace\\tomcat9\\webapps\\Step03
+org.eclipse.jst.jee.server\:Step01=C\:\\Workspace\\tomcat9\\webapps\\Step01
+org.eclipse.jst.jee.server\:Step02=C\:\\Workspace\\tomcat9\\webapps\\Step02
+org.eclipse.jst.jee.server\:StepRe02=C\:\\Workspace\\tomcat9\\webapps\\StepRe02
+org.eclipse.jst.jee.server\:StepRe03=C\:\\Workspace\\tomcat9\\webapps\\StepRe03
+org.eclipse.jst.jee.server\:total=C\:\\Workspace\\tomcat9\\webapps\\total
+org.eclipse.jst.jee.server\:StepRe01=C\:\\Workspace\\tomcat9\\webapps\\StepRe01
+org.eclipse.jst.jee.server\:jstl=C\:\\Workspace\\tomcat9\\webapps\\jstl
+org.eclipse.jst.jee.server\:MemberProject=C\:\\Workspace\\tomcat9\\webapps\\MemberProject

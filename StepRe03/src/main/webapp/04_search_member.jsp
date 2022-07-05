@@ -9,25 +9,14 @@
 <script>
 	$(function(){
 		$("button").click(function(){
-			var d = $('form').serialize();
+			var d = "kind="+$("select").val()+"&search="+%("input").val();
 			$.ajax({
-				url:"member_search_ajax.jsp",
-				data:d,
-				type:"get",
-				dataType:"json",
-				success:function(r){
-					var tag="";
-					for(i=0;i<r.length;i++){
-						tag += "<tr>";
-						tag += "<td>"+r[i].id+"</td>";
-						tag += "<td>"+r[i].pass+"</td>";
-						tag += "<td>"+r[i].name+"</td>";
-						tag += "<td>"+r[i].age+"</td>";
-						tag += "<td>"+r[i].gender+"</td>";
-						tag += "<td>"+r[i].address+"</td>";
-						tag += "</tr>";
-					}
-					$('tbody').html(tag);
+				url : "member_search_ajax.jsp",
+				data : d,
+				type : "get",
+				dataType : "json",
+				success : function(r){
+					
 				}
 			});
 		});
@@ -42,9 +31,9 @@
 			<option value="gender">성별</option>
 		</select>
 		<input type="text" name="search" placeholder="검색어를 입력하세요">
-		<button type="button">검색</button>
+		<button>전송</button>
 	</form>
-	 <table>
+	<table>
 		<thead>
 			<tr>
 				<th>아이디</th>
@@ -56,8 +45,7 @@
 			</tr>
 		</thead>
 		<tbody>
-		<!-- ajax 결과가 추가될 영역	 -->
-		</tbody>
+		</tbody>		
 	</table>
 </body>
 </html>

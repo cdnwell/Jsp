@@ -3,7 +3,6 @@ package vo;
 public class Person {
 	private String name;
 	private int age;
-	
 	public String getName() {
 		return name;
 	}
@@ -25,4 +24,6 @@ public class Person {
 	public String toString() {
 		return "Person [name=" + name + ", age=" + age + "]";
 	}
+	
+	
 }

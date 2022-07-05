@@ -8,10 +8,9 @@
 </head>
 <body>
 <%
-	String item = (String)request.getAttribute("item");
+	String item = (String)request.getAttribute("배송품");
 %>
 
 <%=item %>
-
 </body>
 </html>

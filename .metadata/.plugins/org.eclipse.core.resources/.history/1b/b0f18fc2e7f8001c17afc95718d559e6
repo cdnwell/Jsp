@@ -1,0 +1,12 @@
+package main;
+
+import dao.MemberDAO;
+
+public class SelectAllMemberMain {
+
+	public static void main(String[] args) {
+		
+		
+	}
+
+}

@@ -1,0 +1,57 @@
+<%@page import="org.json.JSONArray"%>
+<%@ page language="java" contentType="text/html; charset=UTF-8"
+    pageEncoding="UTF-8"%>
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+<script type="text/javascript">
+	$(function(){
+		$("button").click(function(){
+			$.ajax({
+				url : "01_ajax_test.jsp",
+				//data는 보내지 않으므로 주석 처리
+				//data :,
+				
+				//지금은 get이든 post든 상관없다.
+				type : "get",
+				
+				//text이므로 굳이 json 쓸 필요없이 아무것도 안넣어도 된다.
+				//dataType: "",
+				
+				success:function(r){
+					for(var i=1;i<=r;i++){
+						if(r%i==0){
+							
+						}
+					}
+				}
+			
+			});
+		});
+	});
+</script>
+</head>
+<body>
+
+</body>
+</html>
+<button>ajax 요청</button>
+	<!-- 버튼 누르면 result에 값을 받아온다. -->
+	<div id="result"></div>
+<%
+	int num = Integer.parseInt(request.getParameter("num"));
+	JSONArray array = new JSONArray();	
+	
+	int j=0;
+	for(int i=1;i<=num;i++){
+		if(num%i==0){
+			array.put(j, i);
+			j++;		
+		}
+	}
+
+	out.write(array.toString());
+%>

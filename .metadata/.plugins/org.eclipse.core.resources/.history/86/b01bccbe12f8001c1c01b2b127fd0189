@@ -1,0 +1,16 @@
+<%@page import="vo.Person"%>
+<%@ page language="java" contentType="text/html; charset=UTF-8"
+    pageEncoding="UTF-8"%>
+<%
+	// 이름 나이 읽어옴
+	// Person 생성
+	// ctrl+space 자동완성 > 위에를 잘 살펴보기
+	String name = request.getParameter("name");
+	int age = Integer.parseInt(request.getParameter("age"));
+	
+	//jsp도 사실 클래스다, 변수타입처럼 쓸 수 있음
+	//@page > 현재 페이지에서 사용할 설정
+	//person클래스 읽어오겠다. < page import="vo.Person"
+	Person person = new Person(name,age);
+	
+%>

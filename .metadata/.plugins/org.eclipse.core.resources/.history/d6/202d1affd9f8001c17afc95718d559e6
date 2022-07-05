@@ -1,0 +1,14 @@
+<%@ page language="java" contentType="text/html; charset=UTF-8"
+    pageEncoding="UTF-8"%>
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+</head>
+<body>
+	<button>현재 날짜 시간 요청</button>
+	<!-- 버튼 누르면 result에 값을 받아온다. -->
+	<div id="result"></div>
+</body>
+</html>

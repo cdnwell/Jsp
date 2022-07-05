@@ -8,7 +8,7 @@
 </head>
 <body>
 <%
-	request.setAttribute("item","PC주변기기");
+	request.setAttribute("배송품","가전기기");
 %>
 <a href="request_attribute_result.jsp">페이지 이동</a>
    <form action="request_attribute_result.jsp">

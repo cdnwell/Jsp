@@ -9,6 +9,15 @@
 <script type="text/javascript">
 	$(function(){
 		$("button").click(function(){
+			// 1. ajax로 데이터를 호출한다. url은 01_ajax_test.jsp
+			// 2. data는 보내지 않는다.
+			// 3. type은 get
+			// 4. dataType은 굳이 쓸 필요 없다.
+			// 5. success : 
+			// url에 데이터를 요청한다. data는 보내지 않고, 요청 방식은 get 방식을  쓴다.
+			// dataType은 반환되는 데이터 타입이고 txt이므로 굳이 쓸 필요 없다.
+			// 요청에 성공하면 result-div에 내용을 넣어준다.
+			
 			$.ajax({
 				url : "01_ajax_test.jsp",
 				//data는 보내지 않으므로 주석 처리

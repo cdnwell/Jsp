@@ -1,0 +1,10 @@
+<%@ page language="java" contentType="text/html; charset=UTF-8"
+    pageEncoding="UTF-8"%>
+<!-- html 태그 없이도 출력 가능하다. -->
+<%=request.getParameter("name")%>
+<%=request.getParameter("hobby")%>
+<%
+	//javascript로 이동
+	//out.write("<script>alert('안녕하세요');location.href='forwardResult.jsp'</script>");
+%>
+<jsp:forward page="forwardResult.jsp"></jsp:forward>
