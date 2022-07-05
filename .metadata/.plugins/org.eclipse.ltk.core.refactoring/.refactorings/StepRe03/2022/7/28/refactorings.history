@@ -1,4 +1,0 @@
-<?xml version="1.0" encoding="UTF-8"?>
-<session version="1.0">
-<refactoring comment="Copy package &apos;config&apos; to &apos;MemberProject/src/main/java&apos;&#x0D;&#x0A;- Original project: &apos;StepRe03&apos;&#x0D;&#x0A;- Destination element: &apos;MemberProject/src/main/java&apos;&#x0D;&#x0A;- Original element: &apos;StepRe03/src/main/java/config&apos;" description="Copy package" destination="=MemberProject/src\/main\/java=/optional=/true=/=/maven.pomderived=/true=/" element1="/src\/main\/java&lt;config" flags="589830" fragments="1" id="org.eclipse.jdt.ui.copy" policy="org.eclipse.jdt.ui.copyPackages" stamp="1656990306612" version="1.0"/>
-</session>

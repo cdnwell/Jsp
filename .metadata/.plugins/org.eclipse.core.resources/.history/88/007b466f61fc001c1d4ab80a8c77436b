@@ -1,0 +1,9 @@
+package dao;
+
+public class MemberDAO {
+	private static MemberDAO instance = new MemberDAO();
+	
+	private MemberDAO() {
+		
+	}
+}

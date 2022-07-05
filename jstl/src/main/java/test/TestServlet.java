@@ -49,6 +49,11 @@ public class TestServlet extends HttpServlet {
 		request.setAttribute("age", 20);
 		request.getRequestDispatcher("jstl_el.jsp").forward(request, response);
 		
+		// 1. MemberDTO 클래스의 객체를 하나 생성해서 세션에 객체를 담는다.
+		// 2. 세션에 msg를 담는다. 값은 알아서 입력
+		// 3. list를 하나 생성하여 dto 클래스의 인스턴스 3개를 생성해서 list에 담는다.
+		// 4. request에 list를 담는다, request에 age를 키로 값을 하나 더 담는다.
+		// 5. forward로 jstl_el.jsp페이지로 넘어간다.
 	}
 
 	/**
