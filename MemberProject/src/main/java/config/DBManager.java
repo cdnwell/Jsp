@@ -43,7 +43,7 @@ public class DBManager {
 	public void close(ResultSet rs, PreparedStatement pstmt) {
 		try {
 			if(rs != null) rs.close();
-			if(pstmt != null) rs.close();
+			if(pstmt != null) pstmt.close();
 		} catch (SQLException e) {
 			e.printStackTrace();
 		}

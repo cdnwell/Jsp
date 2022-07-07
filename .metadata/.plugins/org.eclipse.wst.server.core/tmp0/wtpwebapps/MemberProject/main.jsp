@@ -76,14 +76,14 @@ th,td{
 		<header>
 			<div class="profile">
 				${sessionScope.dto.name }님 로그인 하셨습니다. <br> <a href="logout.do">로그아웃</a>
-				| <a href="#">회원정보 수정</a>
+				| <a href="update_view.jsp">회원정보 수정</a>
 			</div>
 		</header>
 		<nav>
 			<ul>
-				<li><a href="#">홈</a></li>
-				<li><a href="#">회원목록</a></li>
-				<li><a href="#">회원추가</a></li>
+				<li><a href="main.jsp">홈</a></li>
+				<li><a href="memberList.do">회원목록</a></li>
+				<li><a href="register.jsp">회원추가</a></li>
 			</ul>
 		</nav>
 		<section>
