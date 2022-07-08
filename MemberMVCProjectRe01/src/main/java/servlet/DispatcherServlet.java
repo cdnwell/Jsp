@@ -9,6 +9,7 @@ import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 
 import controller.Controller;
+import controller.HandlerMapping;
 import view.ModelAndView;
 
 /**
@@ -30,8 +31,7 @@ public class DispatcherServlet extends HttpServlet {
 	 * @see HttpServlet#doGet(HttpServletRequest request, HttpServletResponse response)
 	 */
 	protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
-		String url = request.getRequestURI().split("/")[2];
-		System.out.println(request.getRequestURI().split("/")[2]);
+		String url = request.getRequestURI().split("/")[2].split("\\.")[0];
 		response.setContentType("text/html;charset=utf-8");
 		Controller controller = HandlerMapping.getInstance().createController(url);
 		

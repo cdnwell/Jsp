@@ -60,7 +60,7 @@
 		</div>
 		<nav>
 			<ul>
-				<li><a href="#">홈</a></li>
+				<li><a href="main.jsp">홈</a></li>
 				<li><a href="#">회원목록</a></li>
 				<li><a href="#">회원추가</a></li>
 			</ul>
