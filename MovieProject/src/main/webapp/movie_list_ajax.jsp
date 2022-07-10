@@ -29,7 +29,6 @@
 						tag += "<td>"+r[i].openDate+"</td>";
 						tag += "<td>"+r[i].count+"</td>";
 						tag += "<td>"+r[i].director+"</td>";
-						
 						tag += "</tr>";
 					}
 					$('tbody').html(tag);

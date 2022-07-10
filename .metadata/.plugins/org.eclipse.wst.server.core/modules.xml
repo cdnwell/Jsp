@@ -6,4 +6,5 @@
   <module moduleId="org.eclipse.jst.jee.server:MovieProject" serverId="Tomcat v9.0 Server at localhost"/>
   <module moduleId="org.eclipse.jst.jee.server:jstlRe01" serverId="Tomcat v9.0 Server at localhost"/>
   <module moduleId="org.eclipse.jst.jee.server:MemberProject" serverId="Tomcat v9.0 Server at localhost"/>
+  <module moduleId="org.eclipse.jst.jee.server:MovieProjectRe01" serverId="Tomcat v9.0 Server at localhost"/>
 </modules>
