@@ -78,13 +78,18 @@ public class MovieDAO {
 		
 	}
 
-	public ArrayList<MovieDTO> selectMovieList(int pageNo) {
+	public ArrayList<MovieDTO> selectMovieList(int pageNo, String kind, String search) {
 		ArrayList<MovieDTO> list = new ArrayList<>();
 		
 		String sql = "SELECT * FROM "
 				+ "(SELECT CEIL(ROWNUM / 7) AS PAGE_NO, M.* "
 				+ "FROM (SELECT * FROM MOVIE ORDER BY BNO DESC) M ) "
-				+ "WHERE PAGE_NO = ?";
+				+ "WHERE PAGE_NO = ? ";
+		
+		if(kind.equals("year"))
+			sql += "to_char(open_date,'YYYY') = ?";
+		else
+			sql += kind+" like '%' || ? || '%'";
 		
 		PreparedStatement pstmt = null;
 		ResultSet rs = null;
@@ -92,6 +97,7 @@ public class MovieDAO {
 		try {
 			pstmt = conn.prepareStatement(sql);
 			pstmt.setInt(1, pageNo);
+			pstmt.setString(2, search);
 			rs = pstmt.executeQuery();
 			
 			while(rs.next()) {

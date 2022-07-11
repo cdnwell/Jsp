@@ -9,6 +9,8 @@ import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 
+import org.json.JSONArray;
+
 import dao.MovieDAO;
 import dto.MovieDTO;
 import vo.PaggingVO;
@@ -36,12 +38,16 @@ public class MovieListServlet extends HttpServlet {
 		if(request.getParameter("pageNo") != null)
 			pageNo = Integer.parseInt(request.getParameter("pageNo"));
 		
-		ArrayList<MovieDTO> list = MovieDAO.getInstance().selectMovieList(pageNo);
+		String kind = request.getParameter("kind");
+		String search = request.getParameter("search");
+		
+		ArrayList<MovieDTO> list = MovieDAO.getInstance().selectMovieList(pageNo,kind,search);
 		int count = MovieDAO.getInstance().selectCount();
 		
 		PaggingVO pagging = new PaggingVO(count, pageNo, 7, 4);
-		request.setAttribute("list", list);
 		request.setAttribute("pagging", pagging);
+		JSONArray array = new JSONArray(list);
+		response.getWriter().write(array.toString());
 		
 		request.getRequestDispatcher("movie_list_ajax.jsp").forward(request, response);
 		

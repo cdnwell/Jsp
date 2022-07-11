@@ -11,8 +11,9 @@
 	$(function(){
 		$('button').click(function(){
 			var d = "kind="+$('#kind').val()+"&search="+$('#search').val();
+			d += "&pageNo="+${'#pageNo'}.val();
 			$.ajax({
-				url : 'search.do',
+				url : 'list.do',
 				data : d,
 				type : 'get',
 				dataType : 'json',
@@ -48,7 +49,6 @@
 	table{
 		border-collapse : collapse;
 		margin : 0px auto;
-		
 	}
 	
 	td,th{
@@ -60,7 +60,6 @@
 </style>
 </head>
 <body>
-	
 	<div id="container">
 		<h2>영화 검색 페이지</h2>
 		<select id="kind">
@@ -69,6 +68,7 @@
 			<option value="year">개봉 연도</option>
 		</select>
 		<input type="text" placeholder="검색어 입력하세요" id="search">
+		<input type="hidden" id="pageNo" value="${requestScope.pagging.currentPageNo }">
 		<button>검색</button>
 		<hr>
 		<table>
