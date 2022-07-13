@@ -6,19 +6,26 @@
 	</section>
 	<section name="wizardPage">
 		<list key="groupId">
+			<item value="ListeneTestRe01"/>
+			<item value="MemberMVCProjectTestRe"/>
 			<item value="MemberMVCProjectRe01"/>
 			<item value="MemberProjectRe02"/>
 			<item value="MemberProjectRe01"/>
 		</list>
 		<list key="name">
+			<item value="Listener"/>
+			<item value="ForTestMVCProject"/>
 		</list>
 		<list key="artifactId">
+			<item value="ListeneTestRe01"/>
+			<item value="MemberMVCProjectTestRe"/>
 			<item value="MemberMVCProjectRe01"/>
 			<item value="MemberProjectRe02"/>
 			<item value="MemberProjectRe01"/>
 		</list>
 		<list key="version">
 			<item value="0.0.1-SNAPSHOT"/>
+			<item value="1.0.0 ver"/>
 		</list>
 	</section>
 	<section name="MavenProjectWizardLocationPage">

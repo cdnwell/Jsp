@@ -1,4 +1,4 @@
-<%@page import="vo.Person"%>
+<%@page import="view.Person"%>
 <%@page import="org.omg.CORBA.IDLTypeOperations"%>
 <%@ page language="java" contentType="text/html; charset=UTF-8"
     pageEncoding="UTF-8"%>
