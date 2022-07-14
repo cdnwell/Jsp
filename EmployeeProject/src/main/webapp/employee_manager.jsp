@@ -121,13 +121,13 @@
                         ${m.eno }
                     </td>
                     <td>
-                        <input type="text" name="name" value="${m.name }" readonly>
+                        <input type="text" name="name" value="${m.name }" >
                     </td>
                     <td>
-                        <input type="text" name="department" value="${m.department }" readonly>
+                        <input type="text" name="department" value="${m.department }" >
                     </td>
                     <td>
-                        <select disabled>
+                        <select name="position">
                             <option value="사원" 
                             	<c:if test="${m.position.equals('사원') }">
                             		selected
@@ -166,7 +166,7 @@
                         </select>
                     </td>
                     <td>
-                        <input type="number" name="salary" value="${m.salary }" readonly>
+                        <input type="number" name="salary" value="${m.salary }" >
                     </td>
                     <td>
                         <button class="update">수정</button> / <a href="delete.do?eno=${m.eno }">삭제</a>

@@ -24,6 +24,7 @@
     <fullyQualifiedTypeName name="org.quartz.TriggerBuilder"/>
     <fullyQualifiedTypeName name="batch.TestCronTrigger"/>
     <fullyQualifiedTypeName name="service.MemberService"/>
-    <fullyQualifiedTypeName name="java.sql.PreparedStatement"/>
     <fullyQualifiedTypeName name="java.sql.ResultSet"/>
+    <fullyQualifiedTypeName name="java.sql.PreparedStatement"/>
+    <fullyQualifiedTypeName name="dao.EmployeeDAO"/>
 </qualifiedTypeNameHistroy>

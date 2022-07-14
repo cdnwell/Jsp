@@ -1,0 +1,62 @@
+package service;
+
+import java.sql.Connection;
+import java.util.ArrayList;
+
+import config.DBManager;
+import dao.BoardDAO;
+import dto.BoardDTO;
+
+public class BoardService {
+	private static BoardService instance = new BoardService();
+	private Connection conn;
+	
+	private BoardService() {
+		conn = DBManager.getInstance().getConn();
+	}
+	
+	public static BoardService getInstance() {
+		if(instance == null)
+			instance = new BoardService();
+		
+		return instance;
+	}
+
+	public ArrayList<BoardDTO> selectBoardList(int pageNo) {
+		return BoardDAO.getInstance().selectBoardList(pageNo);
+	}
+
+	public int selectAllCount() {
+		return BoardDAO.getInstance().selectAllCount();
+	}
+
+	public void insertBoard(BoardDTO dto) {
+		BoardDAO.getInstance().insertBoard(dto);
+	}
+
+	public BoardDTO selectBoard(int bno) {
+		return BoardDAO.getInstance().selectBoard(bno);
+	}
+
+	public void deleteBoard(int bno) {
+		BoardDAO.getInstance().deleteBoard(bno);
+	}
+
+	public void updateBoard(BoardDTO dto) {
+		BoardDAO.getInstance().updateBoard(dto);
+	}
+
+	public void addBoardCount(int bno) {
+		BoardDAO.getInstance().addCountBoard(bno);
+	}
+
+	public int insertBoardLike(int bno,String id) {
+		//등록 하면 1, 중복되었으면 0 이 나옴
+		int result = BoardDAO.getInstance().insertBoardLike(bno, id);
+		if(result == 0)
+			BoardDAO.getInstance().deleteBoardLike(bno, id);
+		
+		return result;
+	}
+	
+}
