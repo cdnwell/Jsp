@@ -19,7 +19,7 @@
 			location.href=d;
 		});
 		$("#btn_like").click(function(){
-			var d = "bno=${requestScope.board.bno}";
+			var d = "bno=${requestScope.board_dto.bno}";
 			$.ajax({
 				url : "boardLike.do",
 				data:d,
@@ -34,7 +34,7 @@
 			});
 		});
 		$("#btn_hate").click(function(){
-			var d = "bno=${requestScope.board.bno}";
+			var d = "bno=${requestScope.board_dto.bno}";
 			$.ajax({
 				url : "boardHate.do",
 				data:d,
@@ -50,23 +50,39 @@
 		});
 	});
 </script>
+<style>
+	table{
+		border-collapse : collapse;
+		width : 600px;
+		margin : 40px auto;
+	}
+	td, th{
+		border : 1px solid black;
+		padding : 10px;
+	}
+	caption{
+		text-align: center;
+	}
+	
+</style>
 </head>
 <body>
 	<table>
+		<caption><h2>게시글 조회</h2></caption>
 		<tr>
 			<td>글번호</td>
 			<td class="bno">${requestScope.board_dto.bno }</td>
 		</tr>
 		<tr>
-			<td>제목 : </td>
+			<td>제목</td>
 			<td>${requestScope.board_dto.title }</td>
 		</tr>
 		<tr>
-			<td>작성자 : </td>
+			<td>작성자</td>
 			<td>${requestScope.board_dto.nick }</td>
 		</tr>
 		<tr>
-			<td>조회수 : </td>
+			<td>조회수</td>
 			<td>${requestScope.board_dto.bcount }</td>
 		</tr>
 		<tr>

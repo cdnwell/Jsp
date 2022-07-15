@@ -58,5 +58,12 @@ public class BoardService {
 		
 		return result;
 	}
+
+	public int insertBoardHate(int bno, String id) {
+		int result = BoardDAO.getInstance().insertBoardHate(bno, id);
+		if(result == 0)
+			BoardDAO.getInstance().deleteBoardHate(bno, id);
+		return result;
+	}
 	
 }

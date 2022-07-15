@@ -14,4 +14,5 @@
   <module moduleId="org.eclipse.jst.jee.server:Board" serverId="Tomcat v9.0 Server at localhost"/>
   <module moduleId="org.eclipse.jst.jee.server:jstl" serverId="Tomcat v9.0 Server at localhost"/>
   <module moduleId="org.eclipse.jst.jee.server:Board_7.14" serverId="Tomcat v9.0 Server at localhost"/>
+  <module moduleId="org.eclipse.jst.jee.server:BoardRe01" serverId="Tomcat v9.0 Server at localhost"/>
 </modules>

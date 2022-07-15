@@ -18,7 +18,7 @@ public class BoardViewController implements Controller {
 			throws ServletException, IOException {
 		int bno = Integer.parseInt(request.getParameter("bno"));
 		
-		HashSet<Integer> set = (HashSet<Integer>) request.getSession().getAttribute("bno_history"); 
+		HashSet<Integer> set = (HashSet<Integer>) request.getSession().getAttribute("bno_history");
 		
 		//한번도 페이지를 방문한 적이 없다.
 		if(set == null) {
@@ -29,6 +29,7 @@ public class BoardViewController implements Controller {
 		//클릭한 게시글 조회수를 증가
 			BoardService.getInstance().addBoardCount(bno);
 		}
+		
 		request.getSession().setAttribute("bno_history", set);
 		//게시글 읽어옴
 		BoardDTO dto = BoardService.getInstance().selectBoard(bno);

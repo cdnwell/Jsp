@@ -7,11 +7,9 @@
     <fullyQualifiedTypeName name="dao.MovieDAO"/>
     <fullyQualifiedTypeName name="java.util.ArrayList"/>
     <fullyQualifiedTypeName name="vo.PaggingVO"/>
-    <fullyQualifiedTypeName name="java.sql.DriverManager"/>
     <fullyQualifiedTypeName name="controller.HandlerMapping"/>
     <fullyQualifiedTypeName name="controller.Controller"/>
     <fullyQualifiedTypeName name="config.DBManager"/>
-    <fullyQualifiedTypeName name="java.sql.Connection"/>
     <fullyQualifiedTypeName name="dao.MemberDAO"/>
     <fullyQualifiedTypeName name="dto.MemberDTO"/>
     <fullyQualifiedTypeName name="org.quartz.impl.StdSchedulerFactory"/>
@@ -24,7 +22,9 @@
     <fullyQualifiedTypeName name="org.quartz.TriggerBuilder"/>
     <fullyQualifiedTypeName name="batch.TestCronTrigger"/>
     <fullyQualifiedTypeName name="service.MemberService"/>
+    <fullyQualifiedTypeName name="dao.EmployeeDAO"/>
+    <fullyQualifiedTypeName name="java.sql.Connection"/>
+    <fullyQualifiedTypeName name="java.sql.DriverManager"/>
     <fullyQualifiedTypeName name="java.sql.ResultSet"/>
     <fullyQualifiedTypeName name="java.sql.PreparedStatement"/>
-    <fullyQualifiedTypeName name="dao.EmployeeDAO"/>
 </qualifiedTypeNameHistroy>
