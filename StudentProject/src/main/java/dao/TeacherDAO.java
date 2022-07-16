@@ -4,8 +4,10 @@ import java.sql.Connection;
 import java.sql.PreparedStatement;
 import java.sql.ResultSet;
 import java.sql.SQLException;
+import java.util.ArrayList;
 
 import config.DBManager;
+import dto.MajorDTO;
 import dto.TeacherDTO;
 
 public class TeacherDAO {
@@ -48,6 +50,31 @@ public class TeacherDAO {
 		}
 		
 		return dto;
+	}
+
+	public ArrayList<MajorDTO> selectMajorList() {
+		ArrayList<MajorDTO> list = new ArrayList<>();
+		
+		String sql = "SELECT * FROM MAJOR_LIST";
+		
+		PreparedStatement pstmt = null;
+		ResultSet rs = null;
+		
+		try {
+			pstmt = conn.prepareStatement(sql);
+			rs = pstmt.executeQuery();
+			
+			while(rs.next()) {
+				list.add(new MajorDTO(rs.getInt(1),rs.getString(2)));
+			}
+			
+		} catch (SQLException e) {
+			e.printStackTrace();
+		} finally {
+			manager.close(rs, pstmt);
+		}
+		
+		return list;
 	}
 	
 	

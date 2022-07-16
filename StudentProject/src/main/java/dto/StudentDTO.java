@@ -3,10 +3,10 @@ package dto;
 public class StudentDTO {
 	private String sno;
 	private String name;
-	private int major;
+	private String major;
 	private double score;
 	
-	public StudentDTO(String sno, String name, int major, double score) {
+	public StudentDTO(String sno, String name, String major, double score) {
 		super();
 		this.sno = sno;
 		this.name = name;
@@ -26,10 +26,10 @@ public class StudentDTO {
 	public void setName(String name) {
 		this.name = name;
 	}
-	public int getMajor() {
+	public String getMajor() {
 		return major;
 	}
-	public void setMajor(int major) {
+	public void setMajor(String major) {
 		this.major = major;
 	}
 	public double getScore() {

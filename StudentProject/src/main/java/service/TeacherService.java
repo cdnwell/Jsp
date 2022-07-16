@@ -1,6 +1,9 @@
 package service;
 
+import java.util.ArrayList;
+
 import dao.TeacherDAO;
+import dto.MajorDTO;
 import dto.TeacherDTO;
 
 public class TeacherService {
@@ -19,6 +22,10 @@ public class TeacherService {
 
 	public TeacherDTO login(String id, String pass) {
 		return TeacherDAO.getInstance().login(id,pass);
+	}
+
+	public ArrayList<MajorDTO> selectMajorList() {
+		return TeacherDAO.getInstance().selectMajorList();
 	}
 	
 	

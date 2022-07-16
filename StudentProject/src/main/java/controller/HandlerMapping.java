@@ -19,7 +19,24 @@ public class HandlerMapping {
 		case "login.do":
 			controller = new LoginController();
 			break;
-		
+		case "main.do":
+			controller = new MainViewController();
+			break;
+		case "logout.do":
+			controller = new LogoutController();
+			break;
+		case "update.do":
+			controller = new UpdateController();
+			break;
+		case "delete.do":
+			controller = new DeleteController();
+			break;
+		case "register.do":
+			controller = new RegisterController();
+			break;
+		case "search.do":
+			controller = new SearchController();
+			break;
 		}
 		
 		return controller;

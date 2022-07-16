@@ -6,6 +6,7 @@
 	</section>
 	<section name="wizardPage">
 		<list key="groupId">
+			<item value="com.koreait"/>
 			<item value="BoardRe01"/>
 			<item value="ListeneTestRe01"/>
 			<item value="MemberMVCProjectTestRe"/>
@@ -14,10 +15,12 @@
 			<item value="MemberProjectRe01"/>
 		</list>
 		<list key="name">
+			<item value="StudentProject"/>
 			<item value="Listener"/>
 			<item value="ForTestMVCProject"/>
 		</list>
 		<list key="artifactId">
+			<item value="StudentProject"/>
 			<item value="BoardRe01"/>
 			<item value="ListeneTestRe01"/>
 			<item value="MemberMVCProjectTestRe"/>
@@ -26,6 +29,7 @@
 			<item value="MemberProjectRe01"/>
 		</list>
 		<list key="version">
+			<item value="1.0.1"/>
 			<item value="0.0.1-SNAPSHOT"/>
 			<item value="1.0.0 ver"/>
 		</list>

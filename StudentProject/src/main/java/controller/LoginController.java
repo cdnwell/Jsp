@@ -24,7 +24,7 @@ public class LoginController implements Controller {
 			response.getWriter().write("<script>alert('아이디 비밀번호를 확인하세요.');history.back();</script>");
 		}else {
 			request.getSession().setAttribute("dto", dto);
-			response.getWriter().write("<script>location.href='main.do'</script>");
+			response.getWriter().write("<script>location.href='main.do';</script>");
 		}
 		
 		return null;
