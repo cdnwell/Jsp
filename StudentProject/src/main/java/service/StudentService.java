@@ -1,6 +1,7 @@
 package service;
 
 import java.util.ArrayList;
+import java.util.HashMap;
 
 import dao.StudentDAO;
 import dto.StudentDTO;
@@ -37,6 +38,10 @@ public class StudentService {
 
 	public ArrayList<StudentDTO> selectStudentSearch(String kind, String search) {
 		return StudentDAO.getInstance().selectStudentSearch(kind,search);
+	}
+
+	public HashMap<StudentDTO,Integer> selectUnderAverage() {
+		return StudentDAO.getInstance().selectUnderAverage();
 	}
 	
 	

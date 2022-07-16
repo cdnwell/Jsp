@@ -38,6 +38,7 @@
         .table_right {
             width: 550px;
             text-align : center;
+            align-self : flex-start;
         }
     </style>
 	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
@@ -136,7 +137,7 @@
                                     <option value="sno">
                                     	학번
                                     </option>
-                                    <option value="major">
+                                    <option value="mname">
                                         전공
                                     </option>
                                 </select>

@@ -5,6 +5,7 @@ import java.sql.PreparedStatement;
 import java.sql.ResultSet;
 import java.sql.SQLException;
 import java.util.ArrayList;
+import java.util.HashMap;
 
 import config.DBManager;
 import dto.StudentDTO;
@@ -115,19 +116,7 @@ public class StudentDAO {
 
 	public ArrayList<StudentDTO> selectStudentSearch(String kind, String search) {
 		ArrayList<StudentDTO> list = new ArrayList<>();
-		String sql = "SELECT * FROM STUDENT_MAJOR_LIST WHERE ";
-		
-		switch (kind) {
-		case "name":
-			sql += "name like '%' || ? || '%'";
-			break;
-		case "sno":
-			sql += "sno like '%' || ? || '%'";
-			break;
-		case "major":
-			sql += "mname like '%' || ? || '%'";
-			break;
-		}
+		String sql = "SELECT * FROM STUDENT_MAJOR_LIST WHERE "+ kind + " like '%' || ? || '%'";
 		
 		PreparedStatement pstmt = null;
 		ResultSet rs = null;
@@ -148,6 +137,29 @@ public class StudentDAO {
 		}
 		
 		return list;
+	}
+
+	public HashMap<StudentDTO,Integer> selectUnderAverage() {
+		HashMap<StudentDTO,Integer> map = new HashMap<>();
+		
+		String sql = "SELECT * FROM STUDENT WHERE SCORE < 2";
+		
+		PreparedStatement pstmt = null;
+		ResultSet rs = null;
+		
+		try {
+			pstmt = conn.prepareStatement(sql);
+			rs = pstmt.executeQuery();
+			
+			while(rs.next()) {
+				map.put(new StudentDTO(rs.getString(1),rs.getString(2),null,rs.getDouble(4)), rs.getInt(3));
+			}
+			
+		} catch (SQLException e) {
+			e.printStackTrace();
+		}
+		
+		return map;
 	}
 	
 	
