@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper
+  PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+  "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="mapper.EmployeeMapper">
+	<resultMap type="dto.EmployeeDTO" id="employee">
+		<id column="eno" property="eno"/>
+		<result column="name" property="name" />
+		<result column="department" property="department"/>
+		<result column="position_no" property="positionNo"/>
+	</resultMap>
+
+	<select id="selectAllEmployee" resultMap="employee">
+		select * from employee
+	</select>
+	
+	<select id="selectDeptEmployee" resultMap="employee" parameterType="String">
+		select * from employee where department = #{a}
+	</select>
+	
+	<insert id="insertEmployee" parameterType="dto.EmployeeDTO">
+		insert into employee values(#{eno},#{name},#{department},#{positionNo})
+	</insert>
+	
+	<update id="updateEmployeePosition">
+		update employee set position_no = 2 where position_no = 1
+	</update>
+	
+	<select id="selectPosition" parameterType="Map" resultMap="employee">
+		select * from employee where position_no between #{start} and #{end}
+	</select>
+	
+	<select id="selectPositionCount" resultType="map">
+		select position_name,
+		(select count(*) from employee e where e.position_no = p.position_no) as ecount
+		from position_list p
+	</select>
+	
+	<select id="selectSearchEmployee" resultMap="employee">
+		select * from employee where
+		<choose>
+			<when test="kind.equals('eno')">
+				eno = #{search}
+			</when>
+			<when test="kind.equals('name')">
+				name like '%' || #{search} || '%'
+			</when>
+			<otherwise>
+				department = #{search}
+			</otherwise>
+		</choose> 
+	</select>
+</mapper>

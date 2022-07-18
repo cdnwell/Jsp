@@ -23,5 +23,47 @@
 		select * from employee where department = #{search}
 	</select>
 	
+	<insert id="insertEmployee" parameterType="dto.EmployeeDTO">
+		insert into employee values(#{eno},#{name},#{department},#{positionNo})
+	</insert>
+	
+	<update id="updatePosition">
+		update employee set position_no = 2 where position_no = 1
+	</update>
+	
+	<!-- 사원들의 직급이 시작값 ~ 마지막값을 보내서 조회 -->
+	<select id="selectPosition" parameterType="Map" resultMap="employee">
+		select * from employee where position_no between #{start} and #{end}
+	</select>
+	
+	<select id="selectPositionCount" resultType="Map">
+		select position_name, 
+		(select count(*) from employee e where e.position_no = p.position_no) as ecount
+		from position_list p
+	</select>
+	
+	<select id="selectSearchEmployee" parameterType="Map" resultMap="employee">
+		select * from employee where 
+		<!-- <if test="kind.equals('eno')">
+			eno = #{search}
+		</if>
+		<if test="kind.equals('name')">
+			name like '%' || #{search} || '%'
+		</if>
+		<if test="kind.equals('department')">
+			department = #{search}
+		</if> -->
+		<choose>
+			<when test="kind.equals('eno')">
+				eno = #{search}
+			</when>
+			<when test="kind.equals('name')">
+				name like '%' || #{search} || '%'
+			</when>
+			<otherwise>
+				department = #{search}
+			</otherwise>
+		</choose>
+	</select>
 	
 </mapper>

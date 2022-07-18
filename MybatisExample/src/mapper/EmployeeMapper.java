@@ -1,6 +1,8 @@
 package mapper;
 
+import java.util.HashMap;
 import java.util.List;
+import java.util.Map;
 
 import org.apache.ibatis.session.SqlSession;
 
@@ -29,6 +31,27 @@ public class EmployeeMapper {
 	
 	public List<EmployeeDTO> selectDeptEmployee(String dept){
 		return session.selectList("selectDeptEmployee", dept);
+	}
+	
+	public int insertEmployee(EmployeeDTO dto) {
+		return session.insert("insertEmployee",dto);
+	}
+	
+	public int updateEmployeePosition() {
+		return session.update("updatePosition");
+	}
+
+	public List<EmployeeDTO> selectPosition(HashMap<String, Integer> map) {
+		return session.selectList("selectPosition",map);
+	}
+	
+	//key값은 무조건 문자열이다.
+	public List<Map<String,Object>> selectPositionCount(){
+		return session.selectList("selectPositionCount");
+	}
+
+	public List<EmployeeDTO> selectSearchEmployee(Map<String, Object> map) {
+		return session.selectList("selectSearchEmployee",map);
 	}
 	
 }

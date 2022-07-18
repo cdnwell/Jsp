@@ -33,7 +33,8 @@ public class DBManager {
 	}
 	
 	public SqlSession getSession() {
-		return sqlSessionFactory.openSession();
+		return sqlSessionFactory.openSession(true);		//true값을 넣어주면 자동으로 커밋이 된다.
+//		return sqlSessionFactory.openSession();			//수동으로 커밋을 해주어야 한다.
 	}
 	
 }
