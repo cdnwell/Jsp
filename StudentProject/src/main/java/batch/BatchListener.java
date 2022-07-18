@@ -41,8 +41,8 @@ public class BatchListener implements ServletContextListener {
     	System.out.println("배치프로그램 실행");
     	//매년 3월 1일, 9월 1일에 실행
     	//0/5 * * * * ?
-//    	trigger = new TestCronTrigger("0 0 0 1 3,9 ? *",AutoDatePrintJob.class);
-    	trigger = new TestCronTrigger("0/5 * * * * ?",AutoDatePrintJob.class);
+    	trigger = new TestCronTrigger("0 0 0 1 3,9 ? *",AutoDatePrintJob.class);
+//    	trigger = new TestCronTrigger("0/5 * * * * ?",AutoDatePrintJob.class);
     	trigger.triggerJob();
     }
 	

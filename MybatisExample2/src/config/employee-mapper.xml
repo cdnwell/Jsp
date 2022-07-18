@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper
+  PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+  "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<!-- id : 파라미터 -->
+<mapper namespace="mapper.EmployeeMapper">
+	<resultMap type="dto.EmployeeDTO" id="employee">
+		<id column="eno" property="eno"/>
+		<result column="name" property="name"/>
+		<result column="department" property="department"/>
+		<result column="position_no" property="positionNo"/>
+	</resultMap>
+
+	<select id="selectAllEmployee" resultMap="employee">
+		select * from employee
+	</select>
+	<!--
+	 타입 하나를 쓰면 데이터 하나 들어옴 이름이 뭐든 상관은 없다. 데이터 두개 이상이면 구분해야 됨 그냥 맵으로 만들어 주면 된다.
+	 따옴표도 다 mybatis가 달아줌 
+	-->
+	<select id="selectDeptEmployee" parameterType="String" resultMap="employee">
+		select * from employee where department = #{search}
+	</select>
+	
+	
+</mapper>

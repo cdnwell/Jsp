@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper
+  PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+  "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="mapper.EmployeeMapper">
+  
+  <resultMap type="dto.EmployeeDTO" id="employee">
+		<id column="eno" property="eno"/>
+		<result column="name" property="name"/>
+		<result column="department" property="department"/>
+		<result column="position" property="position"/>
+  </resultMap>
+  
+  <resultMap type="dto.PositionListDTO" id="position">
+		<id column="eno" property="eno"/>
+		<result column="name" property="name"/>
+		<result column="department" property="department"/>
+		<result column="position" property="position"/>
+  </resultMap>
+  
+  <resultMap type="dto.EmployeeSalaryDTO" id="employeeSalary">
+		<id column="eno" property="eno"/>
+		<result column="salary" property="salary"/>
+  </resultMap>
+  
+  <resultMap type="dto.EmployeeExDTO" id="employeeEx">
+  		<id column="eno" property="eno" />
+  		<result column="name" property="name" />
+  		<result column="department" property="department" />
+  		<result column="position" property="position" />
+  		<collection property="employeeSalaryDTO" resultMap="employeeSalary" />	
+  </resultMap>
+  
+  <select id="login" parameterType="map" resultMap="employee">
+		select * from employee where eno = #{eno} and name = #{name}
+  </select>
+  
+  <select id="selectPosList" parameterType="int" resultType="String">
+  		SELECT NAME
+		FROM POSITION_LIST
+		WHERE PNO = #{pos}
+  </select>
+  
+  <select id="selectEmployeeList" resultType="employeeEx">
+		select * 
+		from employee e
+		inner join employee_salary es on e.eno = es.eno
+  </select>
+  
+</mapper>

@@ -1,14 +1,9 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
 <qualifiedTypeNameHistroy>
     <fullyQualifiedTypeName name="config.DBConfig"/>
-    <fullyQualifiedTypeName name="javax.servlet.http.HttpServletRequest"/>
-    <fullyQualifiedTypeName name="javax.servlet.http.HttpServletResponse"/>
     <fullyQualifiedTypeName name="org.json.JSONArray"/>
     <fullyQualifiedTypeName name="dao.MovieDAO"/>
     <fullyQualifiedTypeName name="vo.PaggingVO"/>
-    <fullyQualifiedTypeName name="controller.HandlerMapping"/>
-    <fullyQualifiedTypeName name="controller.Controller"/>
-    <fullyQualifiedTypeName name="config.DBManager"/>
     <fullyQualifiedTypeName name="dao.MemberDAO"/>
     <fullyQualifiedTypeName name="dto.MemberDTO"/>
     <fullyQualifiedTypeName name="org.quartz.impl.StdSchedulerFactory"/>
@@ -28,8 +23,18 @@
     <fullyQualifiedTypeName name="java.sql.ResultSet"/>
     <fullyQualifiedTypeName name="java.sql.Connection"/>
     <fullyQualifiedTypeName name="java.sql.PreparedStatement"/>
-    <fullyQualifiedTypeName name="view.ModelAndView"/>
-    <fullyQualifiedTypeName name="service.StudentService"/>
     <fullyQualifiedTypeName name="dao.StudentDAO"/>
+    <fullyQualifiedTypeName name="service.StudentService"/>
     <fullyQualifiedTypeName name="java.util.ArrayList"/>
+    <fullyQualifiedTypeName name="org.apache.ibatis.io.Resources"/>
+    <fullyQualifiedTypeName name="org.apache.ibatis.session.SqlSessionFactoryBuilder"/>
+    <fullyQualifiedTypeName name="config.DBManager"/>
+    <fullyQualifiedTypeName name="javax.servlet.http.HttpServletRequest"/>
+    <fullyQualifiedTypeName name="javax.servlet.http.HttpServletResponse"/>
+    <fullyQualifiedTypeName name="controller.Controller"/>
+    <fullyQualifiedTypeName name="controller.HandlerMapping"/>
+    <fullyQualifiedTypeName name="java.util.HashMap"/>
+    <fullyQualifiedTypeName name="mapper.EmployeeMapper"/>
+    <fullyQualifiedTypeName name="view.ModelAndView"/>
+    <fullyQualifiedTypeName name="dto.EmployeeSalaryDTO"/>
 </qualifiedTypeNameHistroy>
