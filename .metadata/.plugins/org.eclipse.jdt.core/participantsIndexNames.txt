@@ -5,6 +5,8 @@ C:\Users\cdnwe\OneDrive\바탕 화면\Jsp\.metadata\.plugins\org.eclipse.jst.jsp
 \Board_7.14\src\main\java
 C:\Users\cdnwe\OneDrive\바탕 화면\Jsp\.metadata\.plugins\org.eclipse.jst.jsp.core\jspsearch\1889839329.index
 \Board\src\main\java
+C:\Users\cdnwe\OneDrive\바탕 화면\Jsp\.metadata\.plugins\org.eclipse.jst.jsp.core\jspsearch\766024892.index
+\MemberMybatisProject\src\main\java
 C:\Users\cdnwe\OneDrive\바탕 화면\Jsp\.metadata\.plugins\org.eclipse.jst.jsp.core\jspsearch\368543946.index
 \Board01\src\main\java
 C:\Users\cdnwe\OneDrive\바탕 화면\Jsp\.metadata\.plugins\org.eclipse.jst.jsp.core\jspsearch\3498870958.index

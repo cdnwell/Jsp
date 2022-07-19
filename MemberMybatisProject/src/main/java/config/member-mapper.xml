@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper
+  PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+  "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<!-- id : 파라미터 -->
+<mapper namespace="mapper.MemberMapper">
+	<resultMap type="dto.MemberDTO" id="memberDTO">
+		<id column="id" property="id"/>
+		<result column="passwd" property="pass"/>
+		<result column="name" property="name"/>
+		<result column="age" property="age"/>
+		<result column="gender" property="gender"/>
+		<result column="address" property="address"/>
+	</resultMap>
+	
+	<select id="login" parameterType="map" resultType="member" resultMap="memberDTO">
+		select * from member where id like #{id} and passwd like #{passwd}
+	</select>
+	<select id="selectTopAge3" resultType="member">
+	<!-- xml은 꺽쇠로 태그를 구분하기 때문에 꺽쇠가 나오면 오류가 난다. -->
+	<![CDATA[
+		select m.* from (select * from member ORDER BY age desc) m where rownum <= 3
+	]]>
+	</select>
+	<insert id="insertMemberDTO" parameterType="member">
+		insert into member values(#{id},#{passwd},#{name},#{age},#{gender},#{address})
+	</insert>
+	<!-- 매개변수 하나면 #{내용} 내용은 아무거나 가능하다. map이나 dto일 경우는 맞춰줘야함 -->
+	<select id="selectMemberDTO" parameterType="String" resultType="member">
+		select * from member where id like #{string}
+	</select>
+	
+	<update id="updateMemberDTO" parameterType="member">
+		update member set passwd=#{passwd}, name=#{name}, age=#{age}, gender=#{gender}, address=#{address} where id = #{id}
+	</update>
+	
+	<delete id="deleteMemberDTO" parameterType="String">
+		delete from member where id = #{id}
+	</delete>
+	
+	<select id="selectMemberList" resultType="member">
+		select * from member
+	</select>
+	
+	<select id="selectMemberSearchList" parameterType="map" resultType="member">
+		select * from member where 
+		<choose>
+			<when test="kind.equals('gender')">
+				gender = #{search}
+			</when>
+			<otherwise>
+				${kind} like '%' || #{search} || '%'
+			</otherwise>
+		</choose>
+	</select>
+	
+</mapper>
