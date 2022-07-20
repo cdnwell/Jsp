@@ -27,12 +27,9 @@
     <fullyQualifiedTypeName name="service.StudentService"/>
     <fullyQualifiedTypeName name="java.util.ArrayList"/>
     <fullyQualifiedTypeName name="org.apache.ibatis.session.SqlSessionFactoryBuilder"/>
-    <fullyQualifiedTypeName name="java.util.HashMap"/>
     <fullyQualifiedTypeName name="mapper.EmployeeMapper"/>
     <fullyQualifiedTypeName name="view.ModelAndView"/>
     <fullyQualifiedTypeName name="dto.EmployeeSalaryDTO"/>
-    <fullyQualifiedTypeName name="org.apache.ibatis.io.Resources"/>
-    <fullyQualifiedTypeName name="config.DBManager"/>
     <fullyQualifiedTypeName name="javax.servlet.http.HttpServletRequest"/>
     <fullyQualifiedTypeName name="javax.servlet.http.HttpServletResponse"/>
     <fullyQualifiedTypeName name="javax.servlet.ServletException"/>
@@ -41,4 +38,7 @@
     <fullyQualifiedTypeName name="controller.Controller"/>
     <fullyQualifiedTypeName name="mapper.MovieMapper"/>
     <fullyQualifiedTypeName name="service.MovieService"/>
+    <fullyQualifiedTypeName name="org.apache.ibatis.io.Resources"/>
+    <fullyQualifiedTypeName name="config.DBManager"/>
+    <fullyQualifiedTypeName name="java.util.HashMap"/>
 </qualifiedTypeNameHistroy>

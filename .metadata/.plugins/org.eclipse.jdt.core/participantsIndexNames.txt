@@ -37,6 +37,8 @@ C:\Users\cdnwe\OneDrive\바탕 화면\Jsp\.metadata\.plugins\org.eclipse.jst.jsp
 \Board01\src\main\java
 C:\Users\cdnwe\OneDrive\바탕 화면\Jsp\.metadata\.plugins\org.eclipse.jst.jsp.core\jspsearch\3071876668.index
 \Board_7.15\src\main\java
+C:\Users\cdnwe\OneDrive\바탕 화면\Jsp\.metadata\.plugins\org.eclipse.jst.jsp.core\jspsearch\3473776760.index
+\MemberMybatisProjectRe01\src\main\java
 C:\Users\cdnwe\OneDrive\바탕 화면\Jsp\.metadata\.plugins\org.eclipse.jst.jsp.core\jspsearch\420413742.index
 \MemberProjectRe01\src\main\java
 C:\Users\cdnwe\OneDrive\바탕 화면\Jsp\.metadata\.plugins\org.eclipse.jst.jsp.core\jspsearch\793674385.index
@@ -45,6 +47,8 @@ C:\Users\cdnwe\OneDrive\바탕 화면\Jsp\.metadata\.plugins\org.eclipse.jst.jsp
 \MemberMVCProjectTestRe\src\main\java
 C:\Users\cdnwe\OneDrive\바탕 화면\Jsp\.metadata\.plugins\org.eclipse.jst.jsp.core\jspsearch\3566242857.index
 \Board_7.15\src\main\java
+C:\Users\cdnwe\OneDrive\바탕 화면\Jsp\.metadata\.plugins\org.eclipse.jst.jsp.core\jspsearch\3488353330.index
+\MemberMybatisProjectRe01\src\main\java
 C:\Users\cdnwe\OneDrive\바탕 화면\Jsp\.metadata\.plugins\org.eclipse.jst.jsp.core\jspsearch\1818712078.index
 \BoardRe01\src\main\java
 C:\Users\cdnwe\OneDrive\바탕 화면\Jsp\.metadata\.plugins\org.eclipse.jst.jsp.core\jspsearch\288567704.index

@@ -6,6 +6,7 @@
 	</section>
 	<section name="wizardPage">
 		<list key="groupId">
+			<item value="MemberMybatisProjectRe01"/>
 			<item value="MovieMybatisProjectRe1"/>
 			<item value="MybatisExampleRe01"/>
 			<item value="MybatisEmployeeProject"/>
@@ -18,6 +19,7 @@
 			<item value="MemberProjectRe01"/>
 		</list>
 		<list key="name">
+			<item value="MemberMybatisProject"/>
 			<item value="MovieProject"/>
 			<item value="EmployeeProject"/>
 			<item value="StudentProject"/>
@@ -25,6 +27,7 @@
 			<item value="ForTestMVCProject"/>
 		</list>
 		<list key="artifactId">
+			<item value="MemberMybatisProjectRe01"/>
 			<item value="MovieMybatisProjectRe1"/>
 			<item value="MybatisExampleRe01"/>
 			<item value="MybatisEmployeeProject"/>
@@ -37,9 +40,9 @@
 			<item value="MemberProjectRe01"/>
 		</list>
 		<list key="version">
+			<item value="1.0.0"/>
 			<item value="0.0.1"/>
 			<item value="0.0.1-SNAPSHOT"/>
-			<item value="1.0.0"/>
 			<item value="1.0.1"/>
 			<item value="1.0.0 ver"/>
 		</list>
