@@ -1,10 +1,16 @@
 package config;
 
+import java.io.IOException;
+import java.io.InputStream;
 import java.sql.Connection;
-import java.sql.DriverManager;
 import java.sql.PreparedStatement;
 import java.sql.ResultSet;
 import java.sql.SQLException;
+
+import org.apache.ibatis.io.Resources;
+import org.apache.ibatis.session.SqlSession;
+import org.apache.ibatis.session.SqlSessionFactory;
+import org.apache.ibatis.session.SqlSessionFactoryBuilder;
 
 /*
  * statement는 기능에서 실행하는 부분만 만들어준다.
@@ -13,20 +19,21 @@ import java.sql.SQLException;
  */
 public class DBManager {
 	private static DBManager instance = new DBManager();
-
+	private SqlSessionFactory sqlSessionFactory;
 	private Connection conn;
 	
 	private DBManager() {
 		
-			try {
-				Class.forName(DBConfig.DB_DRIVER);
-				conn = DriverManager.getConnection(DBConfig.DB_URL,DBConfig.DB_USER,DBConfig.DB_PASS);
-			} catch (ClassNotFoundException e) {
-				e.printStackTrace();
-			} catch (SQLException e) {
-				e.printStackTrace();
-			}
-		
+		String resource = "config/mybatis-config.xml";
+		InputStream inputStream;
+		try {
+			inputStream = Resources.getResourceAsStream(resource);
+			sqlSessionFactory = new SqlSessionFactoryBuilder().build(inputStream);
+			conn = sqlSessionFactory.openSession().getConnection();
+		} catch (IOException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		}
 	}
 	
 	public static DBManager getInstance() {
@@ -38,6 +45,10 @@ public class DBManager {
 	
 	public Connection getConn() {
 		return conn;
+	}
+	
+	public SqlSession getSession() {
+		return sqlSessionFactory.openSession(false);
 	}
 
 	public void close(ResultSet rs, PreparedStatement pstmt) {

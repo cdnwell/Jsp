@@ -129,17 +129,17 @@
 		<button>댓글작성</button>
 	</form>
 	<hr>
-	<c:forEach var="comment" items="${requestScope.list }">
+	<c:forEach var="comment" items="${requestScope.clist }">
 		<div>
 			<p>
 				<input type="hidden" name="cno" value="${comment.cno }">
 				<span>${comment.writer }</span>
 				<span> 작성일 : ${comment.date }</span>
-				<span> <a href="#" class="btn_comment_like">좋아요</a> : ${comment.blike } </span>
-				<span> <a href="#" class="btn_comment_hate">싫어요</a> : ${comment.bhate }</span>
+				<span> <a href="#" class="btn_comment_like">좋아요</a> : ${comment.like } </span>
+				<span> <a href="#" class="btn_comment_hate">싫어요</a> : ${comment.hate }</span>
 			</p>
 			<p>
-				${comment.comment }
+				${comment.content }
 			</p>
 			<c:if test="${sessionScope.dto.id == comment.writer }">
 				<a href="commentDelete.do?cno=${comment.cno }&bno=${requestScope.board_dto.bno}">댓글 삭제</a>

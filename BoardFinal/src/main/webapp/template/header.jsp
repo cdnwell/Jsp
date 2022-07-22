@@ -5,7 +5,7 @@
 nav {
 	width: 1200px;
 	margin: 0 auto;
-	background-color : cornflowerblue;
+	
 	height : 57px;
 	padding : 4px;
 }
@@ -23,7 +23,7 @@ nav>ul>li {
 }
 
 li > a:link, li > a:visited{
-	color : white;
+	color : black;
 	font-weight : bold;
 	text-decoration : none;
 }

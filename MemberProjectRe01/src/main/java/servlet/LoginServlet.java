@@ -1,3 +1,4 @@
+
 package servlet;
 
 import java.io.IOException;
@@ -10,8 +11,8 @@ import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 import javax.servlet.http.HttpSession;
 
-import dao.MemberDAO;
 import dto.MemberDTO;
+import mapper.MemberMapper;
 
 /**
  * Servlet implementation class LoginServlet
@@ -36,7 +37,7 @@ public class LoginServlet extends HttpServlet {
 		String id = request.getParameter("id");
 		String pass = request.getParameter("pass");
 		
-		dto = MemberDAO.getInstance().login(id, pass);
+		dto = MemberMapper.getInstance().login(id, pass);
 		
 		HttpSession session = request.getSession();
 		

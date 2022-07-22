@@ -13,7 +13,7 @@
 		<result column="address" property="address"/>
 	</resultMap>
 	
-	<select id="login" parameterType="map" resultType="member" resultMap="memberDTO">
+	<select id="login" parameterType="map" resultType="member">
 		select * from member where id like #{id} and passwd like #{passwd}
 	</select>
 	<select id="selectTopAge3" resultType="member">

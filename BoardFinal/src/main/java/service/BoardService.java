@@ -2,10 +2,10 @@ package service;
 
 import java.sql.Connection;
 import java.util.ArrayList;
+import java.util.HashMap;
 import java.util.List;
 
 import config.DBManager;
-import dao.BoardDAO;
 import dto.BoardCommentDTO;
 import dto.BoardDTO;
 import mapper.BoardMapper;
@@ -30,11 +30,11 @@ public class BoardService {
 	}
 
 	public int selectAllCount() {
-		return BoardDAO.getInstance().selectAllCount();
+		return BoardMapper.getInstance().selectAllCount();
 	}
 
-	public void insertBoard(BoardDTO dto) {
-		BoardDAO.getInstance().insertBoard(dto);
+	public int insertBoard(BoardDTO dto) {
+		return BoardMapper.getInstance().insertBoard(dto);
 	}
 
 	public BoardDTO selectBoard(int bno) {
@@ -42,11 +42,12 @@ public class BoardService {
 	}
 
 	public void deleteBoard(int bno) {
-		BoardDAO.getInstance().deleteBoard(bno);
+		BoardMapper.getInstance().deleteBoard(bno);
 	}
 
-	public void updateBoard(BoardDTO dto) {
-		BoardDAO.getInstance().updateBoard(dto);
+	public int updateBoard(BoardDTO dto) {
+		int result = BoardMapper.getInstance().updateBoard(dto);
+		return result;
 	}
 
 	public void addBoardCount(int bno) {
@@ -55,21 +56,27 @@ public class BoardService {
 
 	public int insertBoardLike(int bno,String id) {
 		//등록하면 1, 취소하면 0이 나옴
-		int result = BoardDAO.getInstance().insertBoardLike(bno, id);
+		HashMap<String, Object> map = new HashMap<String, Object>();
+		map.put("bno", bno);
+		map.put("id", id);
+		int result = BoardMapper.getInstance().insertBoardLike(map);
 		if(result == 0)
-			BoardDAO.getInstance().deleteBoardLike(bno, id);
+			BoardMapper.getInstance().deleteBoardLike(map);
 		return result;
 	}
 
 	public int insertBoardHate(int bno, String id) {
-		int result = BoardDAO.getInstance().insertBoardHate(bno, id);
+		HashMap<String, Object> map = new HashMap<String, Object>();
+		map.put("bno", bno);
+		map.put("id", id);
+		int result = BoardMapper.getInstance().insertBoardHate(map);
 		if(result == 0)
-			BoardDAO.getInstance().deleteBoardHate(bno, id);
+			BoardMapper.getInstance().deleteBoardHate(map);
 		return result;
 	}
 
 	public void insertBoardComment(BoardCommentDTO dto) {
-		BoardDAO.getInstance().insertBoardComment(dto);
+		BoardMapper.getInstance().insertBoardComment(dto);
 	}
 
 	public List<BoardCommentDTO> selectCommentList(int bno) {
@@ -77,20 +84,26 @@ public class BoardService {
 	}
 
 	public void deleteBoardComment(int cno) {
-		BoardDAO.getInstance().deleteBoardComment(cno);
+		BoardMapper.getInstance().deleteBoardComment(cno);
 	}
 
 	public int insertBoardCommentLike(int cno, String id) {
-		int result = BoardDAO.getInstance().insertBoardCommentLike(cno, id);
+		HashMap<String, Object> map = new HashMap<String, Object>();
+		map.put("cno", cno);
+		map.put("id", id);
+		int result = BoardMapper.getInstance().insertBoardCommentLike(map);
 		if(result == 0)
-			BoardDAO.getInstance().deleteBoardCommentLike(cno, id);
+			BoardMapper.getInstance().deleteBoardCommentLike(map);
 		return result;
 	}
 	
 	public int insertBoardCommentHate(int cno, String id) {
-		int result = BoardDAO.getInstance().insertBoardCommentHate(cno, id);
+		HashMap<String, Object> map = new HashMap<String, Object>();
+		map.put("cno", cno);
+		map.put("id", id);
+		int result = BoardMapper.getInstance().insertBoardCommentHate(map);
 		if(result == 0)
-			BoardDAO.getInstance().deleteBoardCommentHate(cno, id);
+			BoardMapper.getInstance().deleteBoardCommentHate(map);
 		return result;
 	}
 	

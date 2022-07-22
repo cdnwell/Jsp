@@ -3,7 +3,7 @@ package dto;
 public class BoardCommentDTO {
 	private int cno;
 	private int bno;
-	private String comment;
+	private String content;
 	private String writer;
 	private String date;
 	private int like;
@@ -17,17 +17,17 @@ public class BoardCommentDTO {
 		super();
 		this.cno = cno;
 		this.bno = bno;
-		this.comment = content;
+		this.content = content;
 		this.writer = writer;
 		this.date = date;
 		this.like = like;
 		this.hate = hate;
 	}
 	
-	public BoardCommentDTO(int bno, String comment, String writer) {
+	public BoardCommentDTO(int bno, String content, String writer) {
 		super();
 		this.bno = bno;
-		this.comment = comment;
+		this.content = content;
 		this.writer = writer;
 	}
 
@@ -58,14 +58,14 @@ public class BoardCommentDTO {
 	/**
 	 * @return the content
 	 */
-	public String getComment() {
-		return comment;
+	public String getContent() {
+		return content;
 	}
 	/**
 	 * @param content the content to set
 	 */
-	public void setComment(String content) {
-		this.comment = content;
+	public void setContent(String content) {
+		this.content = content;
 	}
 	/**
 	 * @return the writer
@@ -118,7 +118,7 @@ public class BoardCommentDTO {
 	
 	@Override
 	public String toString() {
-		return "BoardCommentDTO [cno=" + cno + ", bno=" + bno + ", comment=" + comment + ", writer=" + writer
+		return "BoardCommentDTO [cno=" + cno + ", bno=" + bno + ", content=" + content + ", writer=" + writer
 				+ ", cdate=" + date + ", like=" + like + ", hate=" + hate + "]";
 	}
 	

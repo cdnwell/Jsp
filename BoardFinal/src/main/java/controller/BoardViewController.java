@@ -41,7 +41,7 @@ public class BoardViewController implements Controller {
 		//게시글에 해당하는 댓글을 읽어옴
 		List<BoardCommentDTO> list = BoardService.getInstance().selectCommentList(bno);
 		
-		request.setAttribute("list", list);
+		request.setAttribute("clist", list);
 		//forward 방식은 url에 데이터를 남겨둔다.
 		return new ModelAndView("board_view.jsp",false);
 	}

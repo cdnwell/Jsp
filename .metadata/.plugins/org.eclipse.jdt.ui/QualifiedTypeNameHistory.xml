@@ -1,7 +1,6 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
 <qualifiedTypeNameHistroy>
     <fullyQualifiedTypeName name="config.DBConfig"/>
-    <fullyQualifiedTypeName name="org.json.JSONArray"/>
     <fullyQualifiedTypeName name="dao.MovieDAO"/>
     <fullyQualifiedTypeName name="vo.PaggingVO"/>
     <fullyQualifiedTypeName name="dao.MemberDAO"/>
@@ -38,7 +37,18 @@
     <fullyQualifiedTypeName name="controller.Controller"/>
     <fullyQualifiedTypeName name="mapper.MovieMapper"/>
     <fullyQualifiedTypeName name="service.MovieService"/>
+    <fullyQualifiedTypeName name="org.junit.jupiter.api.BeforeAll"/>
+    <fullyQualifiedTypeName name="org.junit.jupiter.api.AfterAll"/>
+    <fullyQualifiedTypeName name="java.io.FileReader"/>
+    <fullyQualifiedTypeName name="java.io.BufferedReader"/>
+    <fullyQualifiedTypeName name="java.io.File"/>
+    <fullyQualifiedTypeName name="org.json.JSONArray"/>
+    <fullyQualifiedTypeName name="org.apache.ibatis.session.SqlSession"/>
+    <fullyQualifiedTypeName name="test.MovieTest"/>
+    <fullyQualifiedTypeName name="dto.MovieDTO"/>
+    <fullyQualifiedTypeName name="org.junit.jupiter.api.DisplayName"/>
+    <fullyQualifiedTypeName name="java.util.HashMap"/>
+    <fullyQualifiedTypeName name="org.apache.ibatis.session.SqlSessionFactory"/>
     <fullyQualifiedTypeName name="org.apache.ibatis.io.Resources"/>
     <fullyQualifiedTypeName name="config.DBManager"/>
-    <fullyQualifiedTypeName name="java.util.HashMap"/>
 </qualifiedTypeNameHistroy>

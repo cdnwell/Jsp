@@ -16,8 +16,17 @@
 		values(movie_bno.nextval,#{title},#{openDate},#{audienceCount},#{director})
 	</insert>
 	
+	<insert id="insertMovieTest" parameterType="movie">
+		insert into movie
+		values(#{bno},#{title},#{openDate},#{audienceCount},#{director})
+	</insert>
+	
 	<select id="selectAllMovie" resultMap="movie">
 		select * from movie
+	</select>
+	
+	<select id="selectMovieList" parameterType="String" resultType="dto.MovieDTO">
+		select * from movie where title like '%' || #{search} || '%'
 	</select>
 	
 </mapper>

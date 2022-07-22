@@ -25,7 +25,11 @@ public class DBManager {
 	}
 	
 	public SqlSession getSession() {
-		return factory.openSession(true);
+		return factory.openSession();
+	}
+	
+	public SqlSession getTestSession() {
+		return factory.openSession(false);
 	}
 	
 	public static DBManager getInstance() {
