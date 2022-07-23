@@ -6,6 +6,7 @@
 	</section>
 	<section name="wizardPage">
 		<list key="groupId">
+			<item value="BoardFinalRe01"/>
 			<item value="ProductTestRe01"/>
 			<item value="MemberMybatisProjectRe01"/>
 			<item value="MovieMybatisProjectRe1"/>
@@ -29,6 +30,7 @@
 			<item value="ForTestMVCProject"/>
 		</list>
 		<list key="artifactId">
+			<item value="BoardFinalRe01"/>
 			<item value="ProductTestRe01"/>
 			<item value="MemberMybatisProjectRe01"/>
 			<item value="MovieMybatisProjectRe1"/>
@@ -43,8 +45,8 @@
 			<item value="MemberProjectRe01"/>
 		</list>
 		<list key="version">
-			<item value="1.0.0"/>
 			<item value="0.0.1-SNAPSHOT"/>
+			<item value="1.0.0"/>
 			<item value="0.0.1"/>
 			<item value="1.0.1"/>
 			<item value="1.0.0 ver"/>
@@ -52,6 +54,7 @@
 	</section>
 	<section name="MavenProjectWizardLocationPage">
 		<list key="location">
+			<item value="C:\Users\cdnwe\OneDrive\바탕 화면\Jsp\BoardFinalRe01"/>
 			<item value="C:\Users\cdnwe\OneDrive\바탕 화면\Jsp\MemberProjectRe01"/>
 		</list>
 		<list key="projectNameTemplate">
