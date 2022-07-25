@@ -106,5 +106,9 @@ public class BoardService {
 			BoardMapper.getInstance().deleteBoardCommentHate(map);
 		return result;
 	}
+
+	public int selectBoardNo() {
+		return BoardMapper.getInstance().selectBoardNo();
+	}
 	
 }

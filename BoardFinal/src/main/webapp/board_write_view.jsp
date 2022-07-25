@@ -28,7 +28,7 @@
 		height : 400px;
 	}
 	
-	button{
+	.btn_submit , .btn_back{
 		display : inline-block;
 		width : 207px;
 		box-sizing : border-box;
@@ -36,13 +36,27 @@
 	}
 	
 </style>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
 <script>
-	window.onload = function(){
-		var btnBack = document.querySelector(".btn_back");	
-		btnBack.onclick = function(){
+	$(function(){
+		var count = 3;
+		$(".btn_back").click(function(){
 			history.back();
-		};
-	};
+		});
+		$("#plus").click(function(){
+			if(count == 5) return;
+			count++;
+			$("form").append("<p><input type='file' name='file"+count+"'></p>");
+		});
+		$("#minus").click(function(){
+			if(count == 1) return;
+			count--;
+			$("form").children("p").last().remove();
+		});
+		$(".btn_submit").click(function(){
+			$("form").submit();
+		});
+	});
 </script>
 </head>
 <body>
@@ -51,14 +65,21 @@
 		<!-- 첨부 파일 때문에 get방식으로 보내지 못하여 post로 보낸다. get방식으로는 4mb~8mb 정도만 보냄 -->
 		<!-- post는 파일 크기 무제한으로 전송 가능하다. -->
 		<form action="boardWrite.do" method="post">
+			<input type="hidden" name="writer" class="id" value="${sessionScope.dto.id }">
 			<input type="text" name="title" placeholder="제목을 입력하세요" class="title">
 			<textarea name="content" class="content" placeholder="내용을 입력하세요"></textarea>
 			<div class="buttons">
-			<button>글쓰기</button><button
-			 type="button" class="btn_back">뒤로가기</button>
 			</div>
-			<input type="hidden" name="writer" class="id" value="${sessionScope.dto.id }">
+			<p><input type="file" name="file1">
+			<!-- 파일을 추가하는 경우와 빼는 경우 -->
+				<button type="button" id="plus">+</button>
+				<button type="button" id="minus">-</button>
+			</p>
+			<p><input type="file" name="file2"></p>
+			<p><input type="file" name="file3"></p> 
 		</form>
+		<button class="btn_submit">글쓰기</button><button
+			 type="button" class="btn_back">뒤로가기</button>
 	</section>
 </body>
 </html>
