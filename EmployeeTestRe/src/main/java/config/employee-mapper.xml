@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper
+  PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+  "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="dao.EmployeeDAO">
+
+	<select id="selectByEno" parameterType="String" resultType="dto.EmployeeDTO">
+		select * from employee where eno like '%' || #{num} || '%'
+	</select>
+	
+	<select id="selectByName" parameterType="String" resultType="dto.EmployeeDTO">
+		select * from employee where name like '%' || #{num} || '%'
+	</select>
+	
+	<select id="selectByPosition" parameterType="int" resultType="dto.EmployeeDTO">
+		select * from employee where position = #{num}
+	</select>
+	
+	<insert id="insertEmployee" parameterType="dto.EmployeeDTO">
+		insert into employee values(#{eno},#{name},#{department},#{position})
+	</insert>
+	
+</mapper>

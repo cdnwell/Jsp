@@ -14,12 +14,14 @@ import org.apache.commons.fileupload.FileUploadException;
 import org.apache.commons.fileupload.disk.DiskFileItemFactory;
 import org.apache.commons.fileupload.servlet.ServletFileUpload;
 
+import dto.BoardDTO;
 import dto.FileDTO;
 import service.BoardService;
 import view.ModelAndView;
 
 public class BoardWriteController implements Controller {
-
+	private int bno = 0;
+	
 	@Override
 	public ModelAndView execute(HttpServletRequest request, HttpServletResponse response)
 			throws ServletException, IOException {
@@ -30,8 +32,7 @@ public class BoardWriteController implements Controller {
 		
 		
 		String encoding = "utf-8";
-		File userRoot = new File(request.getSession().getServletContext().getRealPath("/")
-				+"/upload");
+		File userRoot = new File("c:\\fileUpload\\");
 		if(!userRoot.exists())
 			userRoot.mkdirs();
 		DiskFileItemFactory factory = new DiskFileItemFactory();
@@ -43,7 +44,7 @@ public class BoardWriteController implements Controller {
 		try {
 			List<FileItem> list = upload.parseRequest(request);
 			ArrayList<FileDTO> fList = new ArrayList<FileDTO>();
-			int bno = BoardService.getInstance().selectBoardNo();
+			
 			
 			for(FileItem item : list) {
 				if(item.isFormField()) {
@@ -74,18 +75,30 @@ public class BoardWriteController implements Controller {
 						fList.add(new FileDTO(uploadFile, 0, fList.size()));
 						//fList.size() 아무것도 없으면 0, 하나 있으면 1, 두 개 들어가면 2...
 						//생성자 만들면 해결
+						item.write(uploadFile);
 					}
 				}
-				
 			}
+			bno = BoardService.getInstance().selectBoardNo();
+			//게시글 추가
+			BoardDTO dto = new BoardDTO(title, writer, content);
+			dto.setBno(bno);
+			BoardService.getInstance().insertBoard(dto);
+			//파일 테이블에 업로드한 파일 정보를 저장
+			//미리 세팅해서 보내거나 map을 이용해서 보내도 됨(bno)
+			for(FileDTO file : fList) {
+				file.setBno(bno);
+				BoardService.getInstance().insertFile(file);
+			}
+//			request.getSession().setAttribute("fList", fList);
 			
-		
 		} catch (FileUploadException e) {
-			// TODO Auto-generated catch block
+			e.printStackTrace();
+		} catch (Exception e) {
 			e.printStackTrace();
 		}
 		
-		return new ModelAndView("main.do", true);
+		return new ModelAndView("boardView.do?bno="+bno, true);
 	}
 
 }

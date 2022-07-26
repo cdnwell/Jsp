@@ -9,6 +9,10 @@ public class FileDTO {
 	private int bno;
 	private int order;
 	
+	public FileDTO() {
+		super();
+	}
+
 	public FileDTO(File file, int bno, int order) {
 		this.path = file.getAbsolutePath();	//현재 파일 경로가 나옴, 파일명만 제외하고
 		this.fileName = file.getName();
@@ -46,6 +50,20 @@ public class FileDTO {
 	 * @param path the path to set
 	 */
 	public void setPath(String path) {
+		//dto는 set메서드로 저장하기 때문에 null 값이 안나오도록 이렇게 직접 작성해주어야 한다.
+		File file = new File(path);
+		this.fileName = file.getName();
+		//파일 확장자를 뽑기 위한 구문
+		switch(fileName.substring(fileName.lastIndexOf(".")+1).toLowerCase()) {
+		case "png":
+		case "bmp":
+		case "gif":
+		case "jpg":
+			this.type="image";
+			break;
+		default:
+			this.type="normal";
+		}
 		this.path = path;
 	}
 	/**

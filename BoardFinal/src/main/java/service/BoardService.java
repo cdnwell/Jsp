@@ -1,13 +1,13 @@
 package service;
 
 import java.sql.Connection;
-import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.List;
 
 import config.DBManager;
 import dto.BoardCommentDTO;
 import dto.BoardDTO;
+import dto.FileDTO;
 import mapper.BoardMapper;
 
 public class BoardService {
@@ -109,6 +109,30 @@ public class BoardService {
 
 	public int selectBoardNo() {
 		return BoardMapper.getInstance().selectBoardNo();
+	}
+
+	public int insertFile(FileDTO file) {
+		
+		return BoardMapper.getInstance().insertFile(file);
+	}
+
+	public List<FileDTO> selectFileList(int bno) {
+		return BoardMapper.getInstance().selectFileList(bno);
+	}
+
+	public String selectFileName(int bno, int fno) {
+		HashMap<String, Integer> map = new HashMap<String, Integer>();
+		map.put("bno", bno);
+		map.put("fno", fno);
+//		return BoardMapper.getInstance().selectFileName(map);
+		return null;
+	}
+
+	public FileDTO selectFile(int bno, int fno) {
+		HashMap<String,Integer> map = new HashMap<String, Integer>();
+		map.put("bno", bno);
+		map.put("fno", fno);
+		return BoardMapper.getInstance().selectFile(map);
 	}
 	
 }

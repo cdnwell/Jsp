@@ -6,6 +6,10 @@
 	</section>
 	<section name="wizardPage">
 		<list key="groupId">
+			<item value="BoardFinalRe02"/>
+			<item value="EmployeeTestRe"/>
+			<item value="FileUploadTestRe02"/>
+			<item value="FileUploadTestRe01"/>
 			<item value="BoardFinalRe01"/>
 			<item value="ProductTestRe01"/>
 			<item value="MemberMybatisProjectRe01"/>
@@ -17,8 +21,6 @@
 			<item value="ListeneTestRe01"/>
 			<item value="MemberMVCProjectTestRe"/>
 			<item value="MemberMVCProjectRe01"/>
-			<item value="MemberProjectRe02"/>
-			<item value="MemberProjectRe01"/>
 		</list>
 		<list key="name">
 			<item value="ProductTest"/>
@@ -30,6 +32,10 @@
 			<item value="ForTestMVCProject"/>
 		</list>
 		<list key="artifactId">
+			<item value="BoardFinalRe02"/>
+			<item value="EmployeeTestRe"/>
+			<item value="FileUploadTestRe02"/>
+			<item value="FileUploadTestRe01"/>
 			<item value="BoardFinalRe01"/>
 			<item value="ProductTestRe01"/>
 			<item value="MemberMybatisProjectRe01"/>
@@ -41,8 +47,6 @@
 			<item value="ListeneTestRe01"/>
 			<item value="MemberMVCProjectTestRe"/>
 			<item value="MemberMVCProjectRe01"/>
-			<item value="MemberProjectRe02"/>
-			<item value="MemberProjectRe01"/>
 		</list>
 		<list key="version">
 			<item value="0.0.1-SNAPSHOT"/>

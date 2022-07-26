@@ -8,6 +8,7 @@ import org.apache.ibatis.session.SqlSession;
 import config.DBManager;
 import dto.BoardCommentDTO;
 import dto.BoardDTO;
+import dto.FileDTO;
 
 public class BoardMapper {
 	private static BoardMapper instance = new BoardMapper();
@@ -214,6 +215,36 @@ public class BoardMapper {
 		result = session.selectOne("selectBoardNo");
 		session.close();
 		return result;
+	}
+
+	public int insertFile(FileDTO file) {
+		SqlSession session = DBManager.getInstance().getSession();
+		int result = 0;
+		result = session.insert("insertFile",file);
+		session.commit();
+		session.close();
+		return result;
+	}
+
+	public List<FileDTO> selectFileList(int bno) {
+		SqlSession session = DBManager.getInstance().getSession();
+		List<FileDTO> list = session.selectList("selectFileList", bno);
+		session.close();
+		return list;
+	}
+
+	public String selectFileName(HashMap<String, String> map) {
+		SqlSession session = DBManager.getInstance().getSession();
+		String fileName = session.selectOne("selectFileName", map);
+		session.close();
+		return fileName;
+	}
+
+	public FileDTO selectFile(HashMap<String, Integer> map) {
+		SqlSession session = DBManager.getInstance().getSession();
+		FileDTO dto = session.selectOne("selectFile", map);
+		session.close();
+		return dto;
 	}
 	
 }

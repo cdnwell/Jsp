@@ -121,6 +121,14 @@
 				<button id="btn_delete">삭제</button>
 			</td>
 		</tr>
+		<tr>
+			<td colspan="2">
+				<h3>첨부 파일 목록</h3>
+				<c:forEach var="f" items="${requestScope.fileList }">
+					<a href="fileDown.do?bno=${f.bno }&fno=${f.order}">${f.fileName }</a>
+				</c:forEach>
+			</td> 
+		</tr>
 		</c:if>
 	</table>
 	<form action="commentWrite.do" method="post" class="comment_box">

@@ -93,4 +93,20 @@
 		delete from board where bno = #{bno}
 	</delete>
 	
+	<insert id="insertFile" parameterType="dto.FileDTO">
+		insert into board_file values(#{bno},#{order},#{path})
+	</insert>
+	
+	<select id="selectFileList" parameterType="int" resultType="dto.FileDTO">
+		select bno, fno as "order", path from board_file where bno = #{bno}
+	</select>
+	
+	<select id="selectFileName" parameterType="map" resultType="String">
+		select path from board_file where bno = #{bno} and fno = #{fno}
+	</select>
+	
+	<select id="selectFile" parameterType="map" resultType="dto.FileDTO">
+		select bno, fno as "order", path from board_file where bno = #{bno} and fno = #{fno}
+	</select>
+	
 </mapper>
